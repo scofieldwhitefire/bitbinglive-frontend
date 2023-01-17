@@ -1,0 +1,56 @@
+.fullscreen-enable [data-bs-toggle="fullscreen"] .bx-fullscreen::before {
+  content: "\ea3f";
+}
+#sidebar-menu .has-arrow:after {
+  content: "\F0140";
+}
+.custom-accordion .accordion-list.collapsed i.accor-plus-icon:before {
+  content: "\F0415";
+}
+.custom-accordion a.collapsed i.accor-down-icon:before {
+  content: "\F0140";
+}
+.form-checkbox-outline .form-check-input:checked:after {
+  content: "\F012C";
+}
+.auth-pass-inputgroup input[type="input"] + .btn .mdi-eye-outline:before {
+  content: "\F06D1";
+}
+.message-list .checkbox-wrapper-mail label:before {
+  content: "\F012C";
+}
+.chat-conversation .last-chat .conversation-list:before {
+  content: "\F0009";
+}
+@media (min-width: 576px) {
+  .currency-value:after {
+    content: "\F04E1";
+  }
+}
+.hori-timeline .events .event-list.active .down-arrow-icon:before {
+  content: "\ec4c";
+}
+.select2-result-repository__forks .fa.fa-flash::before,
+.select2-result-repository__stargazers .fa.fa-flash::before,
+.select2-result-repository__watchers .fa.fa-flash::before {
+  content: "\f0e7";
+}
+.table-rep-plugin .checkbox-row input[type="checkbox"]:checked + label::after {
+  content: "\f00c";
+}
+.text-primarys {
+  color: var(--color-primary);
+}
+.text-primarys-light {
+  color: rgba(244, 106, 106, 0.25);
+}
+.bg-primarys {
+  background-color: var(--color-primary);
+}
+.bg-primarys:hover {
+  background-color: var(--color-primary-5);
+}
+.bg-primarys.bg-soft {
+  background-color: var(--color-primary);
+  opacity: 0.25
+}
