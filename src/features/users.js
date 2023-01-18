@@ -280,7 +280,7 @@ export const logout = createAsyncThunk("users/logout", async (_, thunkAPI) => {
     localStorage.removeItem("access");
     localStorage.removeItem("refresh");
 
-    const data = { message: "Successfully Logged out", status: 200 };
+    const data = { message: "You have successfully Logged out", status: 200 };
 
     return data;
   } catch (err) {

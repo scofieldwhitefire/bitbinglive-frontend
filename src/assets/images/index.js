@@ -120,6 +120,7 @@ import icon from "./icon.png";
 
 import empty from "./empty.png";
 import avatar from "./avatar.svg";
+import errorImg from "./error-img.png";
 
 export const Logos = {
   logo1,
@@ -246,4 +247,5 @@ export const Images = {
 
   empty,
   avatar,
+  errorImg,
 };

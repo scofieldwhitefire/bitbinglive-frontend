@@ -1,12 +1,36 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom';
-import { Images } from '../../assets/images';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Images, Logos } from "../../assets/images";
 import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../features/users";
 
 const Header = () => {
-    const dispatch = useDispatch();
-    const { user } = useSelector((state) => state.user);
-    const [isNew, setIsNew] = useState(!1)
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.user);
+  const [isNew, setIsNew] = useState(!1);
+
+  const Toast = (t, m) => {
+    toast.clearWaitingQueue();
+    if (t === "success") {
+      toast.success(m);
+    } else if (t === "info") {
+      toast.info(m);
+    } else if (t === "error") {
+      toast.error(m);
+    } else if (t === "warn") {
+      toast.warn(m);
+    }
+  };
+
+  const userLogout = async (e) => {
+    e.preventDefault();
+    const {meta, payload} = await dispatch(logout());
+    const { requestStatus } = meta;
+    const {message} = payload
+    requestStatus.toLowerCase() === "fulfilled"
+      ? Toast("success", message)
+      : Toast("error", 'Try Again');
+  };
   return (
     <>
       <header id="page-topbar">
@@ -14,21 +38,24 @@ const Header = () => {
           <div className="d-flex">
             {/* <!-- LOGO --> */}
             <div className="navbar-brand-box">
-              <a href="index-2.html" className="logo logo-dark">
+              <Link to="/dashboard" className="logo logo-dark">
                 <span className="logo-sm"></span>
                 <span className="logo-lg">
-                  <img src="assets/images/logo-dark.png" alt="" height="17" />
+                  <img src={Logos.logoD} alt="" height="17" />
                 </span>
-              </a>
+              </Link>
 
-              <a href="index-2.html" className="logo logo-light">
+              <Link
+                to="/dashboard"
+                className="logo logo-light mt-3 w-[80%] h-[80%]"
+              >
                 <span className="logo-sm">
                   <img src="assets/images/logo-light.svg" alt="" />
                 </span>
                 <span className="logo-lg">
-                  <img src="assets/images/logo-light.png" alt="" height="19" />
+                  <img src={Logos.logoL} alt="" height="14" />
                 </span>
-              </a>
+              </Link>
             </div>
 
             <button
@@ -482,14 +509,17 @@ const Header = () => {
                   <span key="t-profile">Profile</span>
                 </Link>
                 <a className="dropdown-item" href="#">
-                  <i className="bx bx-wallet font-size-16 align-middle me-1"></i>{" "}
-                  <span key="t-my-wallet">Change Password</span>
+                  <i className="bx bx-shield-quarter font-size-16 align-middle me-1"></i>{" "}
+                  <span key="t-my-password">Change Password</span>
                 </a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item text-danger" href="#">
+                <span
+                  onClick={userLogout}
+                  className="dropdown-item text-danger cursor-pointer"
+                >
                   <i className="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>{" "}
                   <span key="t-logout">Logout</span>
-                </a>
+                </span>
               </div>
             </div>
           </div>
@@ -497,6 +527,6 @@ const Header = () => {
       </header>
     </>
   );
-}
+};
 
-export default Header
+export default Header;
