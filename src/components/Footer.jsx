@@ -158,9 +158,9 @@ const Footer = () => {
                     <p className="day">Sunday</p>
                     <p className="time">Closed</p>
                   </div>
-                  <a href="#" className="rts-btn btn-primary contact-us">
+                  <Link to="/contact" className="rts-btn btn-primary contact-us">
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ const ForexTrading = () => {
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="bread-tag">
-                <a href="index-2.html">Home</a>
+                <Link href="/">Home</Link>
                 <span> / </span>
                 <a href="#" className="active">
                   Forex Trading
@@ -95,9 +95,7 @@ const ForexTrading = () => {
                 </p>
                 <div className="flex items-start justify-start border-l-4 border-[#DF0A0A] pt-6 pl-5 my-4 w-auto shadow-sm shadow-[#6a6a6a1a]">
                   <div className="flex items-center justify-center mr-10 ">
-                    <h6 className="title">
-                        When is the forex market open?
-                        </h6>
+                    <h6 className="title">When is the forex market open?</h6>
                   </div>
                 </div>
                 <p className="disc">

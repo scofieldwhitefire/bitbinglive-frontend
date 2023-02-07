@@ -38,7 +38,7 @@ const About = () => {
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="bread-tag">
-                <a href="index-2.html">Home</a>
+                <Link href="/">Home</Link>
                 <span> / </span>
                 <a href="#" className="active">
                   About Us

@@ -27,7 +27,7 @@ const CopyTrading = () => {
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="bread-tag">
-                <a href="index-2.html">Home</a>
+                <Link href="/">Home</Link>
                 <span> / </span>
                 <a href="#" className="active">
                   Options Trading
@@ -96,7 +96,16 @@ const CopyTrading = () => {
                   quick, trade safe, and get good returns.
                 </p>
                 <p className="disc">
-                  The best thing about binary options trading is that the fact of your winning is not dependent on prevalent marketing conditions. You can win regardless of whether the price of the asset you have put your money on is rising or falling. All you need to do is be aware of the different strategies that you can adopt. Adopting the right strategies can lead to you winning way more than what you ordinarily would have. Another way of maximizing wins is to track the financial markets; this allows you to be aware of when the prices are climbing skywards so you can sell and make your profits.
+                  The best thing about binary options trading is that the fact
+                  of your winning is not dependent on prevalent marketing
+                  conditions. You can win regardless of whether the price of the
+                  asset you have put your money on is rising or falling. All you
+                  need to do is be aware of the different strategies that you
+                  can adopt. Adopting the right strategies can lead to you
+                  winning way more than what you ordinarily would have. Another
+                  way of maximizing wins is to track the financial markets; this
+                  allows you to be aware of when the prices are climbing
+                  skywards so you can sell and make your profits.
                 </p>
               </div>
             </div>
