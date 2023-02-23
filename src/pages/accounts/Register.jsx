@@ -832,9 +832,9 @@ const Login = () => {
                 <div>
                   <p>
                     Already have an account?{" "}
-                    <Link to="/login" className="fw-medium text-primarys">
+                    <a href="https://app.bitbinglive.com" className="fw-medium text-primarys">
                       Login
-                    </Link>
+                    </a>
                   </p>
                   <p>© {new Date().getFullYear()} Bitbinglive. </p>
                 </div>

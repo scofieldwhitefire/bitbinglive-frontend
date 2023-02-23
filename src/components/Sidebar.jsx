@@ -13,33 +13,58 @@ const Sidebar = () => {
         {/* <!-- inner menu area desktop start --> */}
         <div className="rts-sidebar-menu-desktop">
           <Link className="logo-1" to="/">
-            <img className="logo" src={Logos.logoD} width="150" height="40" alt="pro_logo" />
+            <img
+              className="logo"
+              src={Logos.logoD}
+              width="150"
+              height="40"
+              alt="pro_logo"
+            />
             {/* <h4 className="text-[28px] lg:text-[32px] font-bold mt-4">
               Bitbing<span className="font-light">live</span>
             </h4> */}
           </Link>
           <Link className="logo-2" to="/">
-            <img className="logo" src={Logos.logoD} width="150" height="40" alt="pro_logo" />
+            <img
+              className="logo"
+              src={Logos.logoD}
+              width="150"
+              height="40"
+              alt="pro_logo"
+            />
             {/* <h4 className="text-[28px] lg:text-[32px] font-bold mt-4">
               Bitbing<span className="font-light">live</span>
             </h4> */}
           </Link>
           <Link className="logo-3" to="/">
-            <img className="logo" src={Logos.logoD} width="150" height="40" alt="pro_logo" />
+            <img
+              className="logo"
+              src={Logos.logoD}
+              width="150"
+              height="40"
+              alt="pro_logo"
+            />
             {/* <h4 className="text-[28px] lg:text-[32px] font-bold mt-4">
               Bitbing<span className="font-light">live</span>
             </h4> */}
           </Link>
           <Link className="logo-4" to="/">
-            <img className="logo" src={Logos.logoD} width="150" height="40" alt="pro_logo" />
+            <img
+              className="logo"
+              src={Logos.logoD}
+              width="150"
+              height="40"
+              alt="pro_logo"
+            />
             {/* <h4 className="text-[28px] lg:text-[32px] font-bold mt-4">
               Bitbing<span className="font-light">live</span>
             </h4> */}
           </Link>
           <div className="body d-none d-xl-block">
             <p className="disc">
-              Bitbing<span className="font-light">live</span> Limited, is an officially registered company which
-              gives its clients 100% guarantee.
+              Bitbing<span className="font-light">live</span> Limited, is an
+              officially registered company which gives its clients 100%
+              guarantee.
             </p>
             <div className="get-in-touch">
               {/* <!-- title --> */}
@@ -67,7 +92,9 @@ const Sidebar = () => {
                 {/* <!-- single --> */}
                 <div className="single">
                   <i className="fas fa-map-marker-alt"></i>
-                  <a href="#">58 Peregrine Road, Hainault, Ilford, Essex IG6 3SZ UK</a>
+                  <a href="#">
+                    58 Peregrine Road, Hainault, Ilford, Essex IG6 3SZ UK
+                  </a>
                 </div>
                 {/* <!-- single ENd --> */}
               </div>
@@ -135,12 +162,12 @@ const Sidebar = () => {
               </Link>
             ) : (
               <div className="flex">
-                <Link
-                  to="/login"
+                <a
+                  href="https://app.bitbinglive.com"
                   className="mx-2 px-4 rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btnmenu"
                 >
                   Login
-                </Link>
+                </a>
                 <Link
                   to="/register"
                   className="mx-2 px-4 rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btnmenu"

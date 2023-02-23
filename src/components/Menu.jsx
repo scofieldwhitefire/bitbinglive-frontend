@@ -98,12 +98,12 @@ const Menu = () => {
                       Dashboard
                     </Link>
                   ) : (
-                    <Link
-                      to="/login"
+                    <a
+                      href="https://app.bitbinglive.com"
                       className="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btn"
                     >
                       Login
-                    </Link>
+                    </a>
                   )}
 
                   <button

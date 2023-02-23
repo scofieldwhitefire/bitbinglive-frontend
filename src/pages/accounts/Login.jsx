@@ -70,7 +70,7 @@ const Login = () => {
             : "";
         await dispatch(
           getActivities({
-            message: `You logged near - [${info}]`,
+            message: `You logged in near - [${info}]`,
           })
         );
       }
@@ -215,9 +215,9 @@ const Login = () => {
                 <div>
                   <p>
                     Don't have an account?{" "}
-                    <Link to="/register" className="fw-medium text-primarys">
+                    <a href="https://app.bitbinglive.com/signup" className="fw-medium text-primarys">
                       Register
-                    </Link>
+                    </a>
                   </p>
                   <p>© {new Date().getFullYear()} Bitbinglive. </p>
                 </div>

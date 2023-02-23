@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { ClientJS } from 'clientjs'
+import { ClientJS } from "clientjs";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../Home.css";
@@ -19,18 +19,18 @@ const Home = () => {
   const onLoadScriptRef2 = useRef();
   const ch = useState(!1);
   let [n, setN] = useState(1);
-  const client = new ClientJS()
+  const client = new ClientJS();
 
-  const isMobile = client.isMobile()
+  const isMobile = client.isMobile();
 
   let tvScriptLoadingPromise;
 
-  const showCharts = (x='init') => {
+  const showCharts = (x = "init") => {
     if (x === "next") {
       n += 1;
     } else if (x === "prev") {
       n -= 1;
-    } 
+    }
     n > 3 && setN(1);
     n < 1 && setN(3);
 
@@ -60,14 +60,12 @@ const Home = () => {
         document.head.appendChild(script);
       });
     }
-    
-    tvScriptLoadingPromise.then(
-      () => {
-        onLoadScriptRef.current && onLoadScriptRef.current()
-        onLoadScriptSRef.current && onLoadScriptSRef.current()
-        onLoadScriptTRef.current && onLoadScriptTRef.current()
-        }
-    );
+
+    tvScriptLoadingPromise.then(() => {
+      onLoadScriptRef.current && onLoadScriptRef.current();
+      onLoadScriptSRef.current && onLoadScriptSRef.current();
+      onLoadScriptTRef.current && onLoadScriptTRef.current();
+    });
 
     // return () => ([onLoadScriptRef.current, onLoadScriptSRef.current, onLoadScriptTRef.current, onLoadScriptRef2.current] = null);
     return () => (onLoadScriptRef.current = null);
@@ -188,12 +186,12 @@ const Home = () => {
                     Dashboard
                   </Link>
                 ) : (
-                  <Link
-                    to="/login"
+                  <a
+                    href="https://app.bitbinglive.com"
                     className="rts-btn btn-primary color-h-black"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 )}
                 <img
                   className="shape-img one"
@@ -213,10 +211,11 @@ const Home = () => {
                   </i>
                 </p>
                 <h1 className="title uppercase font-bold">
-                   An <span>Easy way</span> <br /> To tarde
+                  An <span>Easy way</span> <br /> To tarde
                 </h1>
                 <p className="disc banner-para">
-                  Trade on the Forex, Crypto and Stock Markets with Ease.<br />
+                  Trade on the Forex, Crypto and Stock Markets with Ease.
+                  <br />
                   Trading is better with us, Experience the difference.
                 </p>
                 {isAuthenticated ? (
@@ -227,12 +226,12 @@ const Home = () => {
                     Dashboard
                   </Link>
                 ) : (
-                  <Link
-                    to="/login"
+                  <a
+                    href="https://app.bitbinglive.com"
                     className="rts-btn btn-primary color-h-black"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 )}
                 <img
                   className="shape-img one"
@@ -262,8 +261,10 @@ const Home = () => {
                   </i>{" "}
                 </h1>
                 <p className="disc banner-para" style={{ color: "white" }}>
-                  Access all digital assets with our E256 Encryption security level<br />
-                  </p>
+                  Access all digital assets with our E256 Encryption security
+                  level
+                  <br />
+                </p>
                 {isAuthenticated ? (
                   <Link
                     to="/dashboard"
@@ -272,12 +273,12 @@ const Home = () => {
                     Dashboard
                   </Link>
                 ) : (
-                  <Link
-                    to="/login"
+                  <a
+                    href="https://app.bitbinglive.com"
                     className="rts-btn btn-primary color-h-black"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 )}
                 <img
                   className="shape-img one"
@@ -802,9 +803,12 @@ const Home = () => {
                               Invest now
                             </Link>
                           ) : (
-                            <Link className="rts-btn btn-primary" to="/login">
+                            <a
+                              className="rts-btn btn-primary"
+                              href="https://app.bitbinglive.com"
+                            >
                               Login
-                            </Link>
+                            </a>
                           )}
                         </div>
                       </div>
@@ -843,9 +847,12 @@ const Home = () => {
                               Invest now
                             </Link>
                           ) : (
-                            <Link className="rts-btn btn-primary" to="/login">
+                            <a
+                              className="rts-btn btn-primary"
+                              href="https://app.bitbinglive.com"
+                            >
                               Login
-                            </Link>
+                            </a>
                           )}
                         </div>
                       </div>
@@ -884,9 +891,12 @@ const Home = () => {
                               Invest now
                             </Link>
                           ) : (
-                            <Link className="rts-btn btn-primary" to="/login">
+                            <a
+                              className="rts-btn btn-primary"
+                              href="https://app.bitbinglive.com"
+                            >
                               Login
-                            </Link>
+                            </a>
                           )}
                         </div>
                       </div>
@@ -1129,8 +1139,9 @@ const Home = () => {
                     <div className="swiper-slide">
                       <div className="testimonial-inner">
                         <p className="disc text-start">
-                          “Impressive customer services, I can now trade with peace
-                          of mind. Thanks for the high quality performance for traders. Love it”
+                          “Impressive customer services, I can now trade with
+                          peace of mind. Thanks for the high quality performance
+                          for traders. Love it”
                         </p>
                         <div className="testimonial-bottom-one">
                           <div className="thumbnail">
@@ -1140,7 +1151,9 @@ const Home = () => {
                             />
                           </div>
                           <div className="details">
-                              <h5 className="title text-[#DF0A0A]">Victor Alisson</h5>
+                            <h5 className="title text-[#DF0A0A]">
+                              Victor Alisson
+                            </h5>
                             <span>Investor</span>
                           </div>
                         </div>
@@ -1160,7 +1173,9 @@ const Home = () => {
                             />
                           </div>
                           <div className="details">
-                              <h5 className="title text-[#DF0A0A]">Vanessa Martins</h5>
+                            <h5 className="title text-[#DF0A0A]">
+                              Vanessa Martins
+                            </h5>
                             <span>Forex Trader</span>
                           </div>
                         </div>
@@ -1169,9 +1184,9 @@ const Home = () => {
                     <div className="swiper-slide">
                       <div className="testimonial-inner">
                         <p className="disc text-start">
-                          “Pretty solid so far!. Opening an account was relatively 
-                          quick which was nice, and the spreads are amazing. Highly 
-                          recommend this broker.”
+                          “Pretty solid so far!. Opening an account was
+                          relatively quick which was nice, and the spreads are
+                          amazing. Highly recommend this broker.”
                         </p>
                         <div className="testimonial-bottom-one">
                           <div className="thumbnail">
@@ -1181,7 +1196,9 @@ const Home = () => {
                             />
                           </div>
                           <div className="details">
-                              <h5 className="title text-[#DF0A0A]">Diego bacellar</h5>
+                            <h5 className="title text-[#DF0A0A]">
+                              Diego bacellar
+                            </h5>
                             <span>Crypto Expert</span>
                           </div>
                         </div>
