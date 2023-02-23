@@ -844,7 +844,7 @@ const Home = () => {
                               className="rts-btn btn-primary"
                               to="/dashboard"
                             >
-                              Invest now
+                              Invest Now
                             </Link>
                           ) : (
                             <a
