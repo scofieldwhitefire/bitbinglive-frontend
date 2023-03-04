@@ -17167,6 +17167,7 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
   text-align: center;
   font-size: 18px;
   background: #fff;
+  opacity: 0.5 !important;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;

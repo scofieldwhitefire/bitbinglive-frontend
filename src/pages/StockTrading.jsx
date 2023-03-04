@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import TopBanner from "../components/TopBanner";
 import HomeHelmet from "../components/Helmets/HomeHelmet";
 import UsefulLinks from "../components/UsefulLinks";
+import { Link } from "react-router-dom";
 
 const StockTrading = () => {
   return (

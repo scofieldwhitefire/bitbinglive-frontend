@@ -43,6 +43,7 @@ const js = [
   { path: "js/plugins", file: "contact.form.js" },
   { path: "js", file: "main.js" },
   { path: "js", file: "init.js" },
+  { path: "js", file: "chat.js" },
 ];
 
 const js2 = [

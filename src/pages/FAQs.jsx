@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import Sidebar from "../components/Sidebar";
 import TopBanner from "../components/TopBanner";
+import { Link } from "react-router-dom";
 import HomeHelmet from "../components/Helmets/HomeHelmet";
 
 const FAQs = () => {

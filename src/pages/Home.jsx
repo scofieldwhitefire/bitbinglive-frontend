@@ -27,19 +27,13 @@ const Home = () => {
 
   const showCharts = (x = "init") => {
     if (x === "next") {
-      n += 1;
+      setN(n += 1);
     } else if (x === "prev") {
-      n -= 1;
+      setN(n -= 1);
     }
     n > 3 && setN(1);
     n < 1 && setN(3);
 
-    n === 1 &&
-      (document.getElementById("tradingview_848b8").style.display = "block");
-    n === 2 &&
-      (document.getElementById("tradingview_848c5").style.display = "block");
-    n === 3 &&
-      (document.getElementById("tradingview_8wec5").style.display = "block");
   };
 
   useEffect(() => {
@@ -135,7 +129,7 @@ const Home = () => {
         });
       }
     }
-  }, [ch]);
+  }, [n]);
 
   return (
     <>
@@ -159,132 +153,139 @@ const Home = () => {
           <div className="swiper-wrapper">
             <div className="swiper-slide">
               {/* <!-- banner single content --> */}
-              <div className="banner-one-inner text-start">
-                <p className="pre-title">
-                  <span>Welcome!</span>{" "}
-                  <i style={{ color: "white", fontStyle: "normal" }}>
-                    Start Growing...
-                  </i>
-                </p>
-                <h1 className="title uppercase font-bold">
-                  <span>Grow Your </span>
-                  <i style={{ color: "white", fontStyle: "normal" }}>
-                    Portfolio <br /> today.
-                  </i>{" "}
-                </h1>
-                <p className="disc banner-para" style={{ color: "white" }}>
-                  The most convenient trading interface. Instant access to more
-                  than 100 assets
-                  <br />
-                  All over the world.
-                </p>
-                {isAuthenticated ? (
-                  <Link
-                    to="/dashboard"
-                    className="rts-btn btn-primary color-h-black"
-                  >
-                    Dashboard
-                  </Link>
-                ) : (
-                  <a
-                    href="https://app.bitbinglive.com"
-                    className="rts-btn btn-primary color-h-black"
-                  >
-                    Get Started
-                  </a>
-                )}
-                <img
-                  className="shape-img one"
-                  src={Images.shape01}
-                  alt="banner_business"
-                />
+              <div className="bg-black bg-opacity-70 w-full flex justify-center items-center">
+                <div className="banner-one-inner text-start">
+                  <p className="pre-title">
+                    <span>Welcome!</span>{" "}
+                    <i style={{ color: "white", fontStyle: "normal" }}>
+                      Start Growing...
+                    </i>
+                  </p>
+                  <h1 className="title uppercase font-bold">
+                    <span>Grow Your </span>
+                    <i style={{ color: "white", fontStyle: "normal" }}>
+                      Portfolio <br /> today.
+                    </i>{" "}
+                  </h1>
+                  <p className="disc banner-para" style={{ color: "white" }}>
+                    The most convenient trading interface. Instant access to
+                    more than 100 assets
+                    <br />
+                    All over the world.
+                  </p>
+                  {isAuthenticated ? (
+                    <Link
+                      to="/dashboard"
+                      className="rts-btn btn-primary color-h-black"
+                    >
+                      Dashboard
+                    </Link>
+                  ) : (
+                    <a
+                      href="https://app.bitbinglive.com"
+                      className="rts-btn btn-primary color-h-black"
+                    >
+                      Get Started
+                    </a>
+                  )}
+                  <img
+                    className="shape-img one"
+                    src={Images.shape01}
+                    alt="banner_business"
+                  />
+                </div>
+                {/* <!-- banner single content end --> */}
               </div>
-              {/* <!-- banner single content end --> */}
             </div>
             <div className="swiper-slide two">
               {/* <!-- banner single content --> */}
-              <div className="banner-one-inner text-start">
-                <p className="pre-title">
-                  <span>Welcome!</span>{" "}
-                  <i style={{ color: "white", fontStyle: "normal" }}>
-                    Start Growing...
-                  </i>
-                </p>
-                <h1 className="title uppercase font-bold">
-                  An <span>Easy way</span> <br /> To tarde
-                </h1>
-                <p className="disc banner-para">
-                  Trade on the Forex, Crypto and Stock Markets with Ease.
-                  <br />
-                  Trading is better with us, Experience the difference.
-                </p>
-                {isAuthenticated ? (
-                  <Link
-                    to="/dashboard"
-                    className="rts-btn btn-primary color-h-black"
-                  >
-                    Dashboard
-                  </Link>
-                ) : (
-                  <a
-                    href="https://app.bitbinglive.com"
-                    className="rts-btn btn-primary color-h-black"
-                  >
-                    Get Started
-                  </a>
-                )}
-                <img
-                  className="shape-img one"
-                  src={Images.shape01}
-                  alt="banner_business"
-                />
+              <div className="bg-black bg-opacity-70 w-full flex justify-center items-center">
+                <div className="banner-one-inner text-start">
+                  <p className="pre-title">
+                    <span>Welcome!</span>{" "}
+                    <i style={{ color: "white", fontStyle: "normal" }}>
+                      Start Growing...
+                    </i>
+                  </p>
+                  <h1 className="title uppercase font-bold">
+                    <i className="text-white">An</i> <span>Easy way</span>{" "}
+                    <br /> <i className="text-white">To tarde</i>
+                  </h1>
+                  <p className="disc banner-para text-white">
+                    Trade on the Forex, Crypto and Stock Markets with Ease.
+                    <br />
+                    Trading is better with us, Experience the difference.
+                  </p>
+                  {isAuthenticated ? (
+                    <Link
+                      to="/dashboard"
+                      className="rts-btn btn-primary color-h-black"
+                    >
+                      Dashboard
+                    </Link>
+                  ) : (
+                    <a
+                      href="https://app.bitbinglive.com"
+                      className="rts-btn btn-primary color-h-black"
+                    >
+                      Get Started
+                    </a>
+                  )}
+                  <img
+                    className="shape-img one"
+                    src={Images.shape01}
+                    alt="banner_business"
+                  />
+                </div>
               </div>
               {/* <!-- banner single content end --> */}
             </div>
             <div className="swiper-slide three">
               {/* <!-- banner single content --> */}
-              <div className="banner-one-inner text-start">
-                <p className="pre-title">
-                  <span>Welcome!</span>{" "}
-                  <i style={{ color: "white", fontStyle: "normal" }}>
-                    Start Growing...
-                  </i>
-                </p>
-                <h1 className="title uppercase font-bold">
-                  <i style={{ color: "white", fontStyle: "normal" }}>A</i>{" "}
-                  <span>Secure </span>
-                  <i style={{ color: "white", fontStyle: "normal" }}>and</i>
-                  <br />
-                  <span>Reliable </span>
-                  <i style={{ color: "white", fontStyle: "normal" }}>
-                    platform
-                  </i>{" "}
-                </h1>
-                <p className="disc banner-para" style={{ color: "white" }}>
-                  Access all digital assets with our E256 Encryption security
-                  level
-                  <br />
-                </p>
-                {isAuthenticated ? (
-                  <Link
-                    to="/dashboard"
-                    className="rts-btn btn-primary color-h-black"
-                  >
-                    Dashboard
-                  </Link>
-                ) : (
-                  <a
-                    href="https://app.bitbinglive.com"
-                    className="rts-btn btn-primary color-h-black"
-                  >
-                    Get Started
-                  </a>
-                )}
-                <img
-                  className="shape-img one"
-                  src={Images.shape01}
-                  alt="banner_business"
-                />
+              <div className="bg-black bg-opacity-70 w-full flex justify-center items-center">
+                <div className="banner-one-inner text-start">
+                  <p className="pre-title">
+                    <span>Welcome!</span>{" "}
+                    <i style={{ color: "white", fontStyle: "normal" }}>
+                      Start Growing...
+                    </i>
+                  </p>
+                  <h1 className="title uppercase font-bold">
+                    <i style={{ color: "white", fontStyle: "normal" }}>A</i>{" "}
+                    <span>Secure </span>
+                    <i style={{ color: "white", fontStyle: "normal" }}>and</i>
+                    <br />
+                    <span>Reliable </span>
+                    <i style={{ color: "white", fontStyle: "normal" }}>
+                      platform
+                    </i>{" "}
+                  </h1>
+                  <p className="disc banner-para" style={{ color: "white" }}>
+                    Access all digital assets with our E256 Encryption security
+                    level
+                    <br />
+                  </p>
+                  {isAuthenticated ? (
+                    <Link
+                      to="/dashboard"
+                      className="rts-btn btn-primary color-h-black"
+                    >
+                      Dashboard
+                    </Link>
+                  ) : (
+                    <a
+                      href="https://app.bitbinglive.com"
+                      className="rts-btn btn-primary color-h-black"
+                    >
+                      Get Started
+                    </a>
+                  )}
+                  <img
+                    className="shape-img one"
+                    src={Images.shape01}
+                    alt="banner_business"
+                  />
+                </div>
               </div>
               {/* <!-- banner single content end --> */}
             </div>
@@ -769,7 +770,7 @@ const Home = () => {
             <div className="col-12">
               <div className="swiper mygallery mySwipers">
                 <div className="swiper-wrapper gallery">
-                  <div className="swiper-slide">
+                  {n===1&&<div className="swiper-slide">
                     <div className="row g-5 w-g-100">
                       <div
                         id="firstTrade"
@@ -778,7 +779,7 @@ const Home = () => {
                         <div id="firstTradew" className="thumbnail-gallery">
                           <div className="tradingview-widget-container">
                             <div
-                              style={{ display: "none" }}
+                              className="trades"
                               id="tradingview_848b8"
                             ></div>
                           </div>
@@ -813,14 +814,14 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="swiper-slide">
+                  </div>}
+                  {n===2&&<div className="swiper-slide">
                     <div className="row g-5 w-g-100">
                       <div id="secondTrade" className="col-lg-7">
                         <div id="secondTradew" className="thumbnail-gallery">
                           <div className="tradingview-widget-container">
                             <div
-                              style={{ display: "none" }}
+                              className="trades"
                               id="tradingview_848c5"
                             ></div>
                           </div>
@@ -857,14 +858,14 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="swiper-slide">
+                  </div>}
+                  {n===3&&<div className="swiper-slide">
                     <div className="row g-5 w-g-100">
                       <div id="thirdTrade" className="col-lg-7">
                         <div id="thirdTradew" className="thumbnail-gallery">
                           <div className="tradingview-widget-container">
                             <div
-                              style={{ display: "none" }}
+                              className="trades"
                               id="tradingview_8wec5"
                             ></div>
                           </div>
@@ -901,12 +902,16 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div>}
                 </div>
                 <div
                   className="swiper-button-next"
                   onClick={() => showCharts("next")}
                 ></div>
+                <div className="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal">
+                  <span className="swiper-pagination-current">{n}</span> /{" "}
+                  <span className="swiper-pagination-total">3</span>
+                </div>
                 <div
                   className="swiper-button-prev"
                   onClick={() => showCharts("prev")}

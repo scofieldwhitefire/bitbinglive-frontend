@@ -247,28 +247,28 @@
               },
             });
           });
-          $(document).ready(function() {
-            var swiper = new Swiper(".mySwipers", {
-                loop: true,
-                loopedSlides: 50,
-                autoHeight: true,
-                shortSwipes: false,
-                longSwipes: false,
-                effect: 'fade',
-                // speed: 500,
-                // autoplay: {
-                //     delay: 1500,
-                // },
-                pagination: {
-                  el: ".swiper-pagination",
-                  type: "fraction",
-                },
-                navigation: {
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
-                },
-              });
-          });
+          // $(document).ready(function() {
+          //   var swiper = new Swiper(".mySwipers", {
+          //       loop: true,
+          //       loopedSlides: 50,
+          //       autoHeight: true,
+          //       shortSwipes: false,
+          //       longSwipes: false,
+          //       effect: 'fade',
+          //       // speed: 500,
+          //       // autoplay: {
+          //       //     delay: 1500,
+          //       // },
+          //       pagination: {
+          //         el: ".swiper-pagination",
+          //         type: "fraction",
+          //       },
+          //       // navigation: {
+          //       //   nextEl: ".swiper-button-next",
+          //       //   prevEl: ".swiper-button-prev",
+          //       // },
+          //     });
+          // });
           $(document).ready(function() {
             var swiper = new Swiper(".mySwipertestimonial", {
               loop: true,

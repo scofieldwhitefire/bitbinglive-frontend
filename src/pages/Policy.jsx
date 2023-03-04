@@ -3,6 +3,7 @@ import Menu from "../components/Menu";
 import Sidebar from "../components/Sidebar";
 import TopBanner from "../components/TopBanner";
 import HomeHelmet from "../components/Helmets/HomeHelmet";
+import { Link } from "react-router-dom";
 
 const Policy = () => {
   return (
