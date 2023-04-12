@@ -451,9 +451,7 @@ const Home = () => {
                   <img src={Images.icon01} alt="pro_service" />
                 </div>
                 <div className="service-details">
-                  <a href="service-details.html">
                     <h5 className="title">FLEXIBLE TRADING</h5>
-                  </a>
                   <p className="disc">
                     The latest trends in options trading: Digital Option,
                     Pending Orders, Trades Copying. Payouts up to 128%.
@@ -475,9 +473,7 @@ const Home = () => {
                   <img src={Images.icon02} alt="pro_service" />
                 </div>
                 <div className="service-details">
-                  <a href="service-details.html">
                     <h5 className="title">24/7 CUSTOMER SUPPORT</h5>
-                  </a>
                   <p className="disc">
                     We provide 24/7 customer support through e-mail. Our support
                     representatives are always available to answer any
@@ -500,9 +496,7 @@ const Home = () => {
                   <img src={Images.icon03} alt="pro_service" />
                 </div>
                 <div className="service-details">
-                  <a href="service-details.html">
                     <h5 className="title">SAFE AND SECURE</h5>
-                  </a>
                   <p className="disc">
                     We use the highest level of protection . Our website can
                     resists attacks of any size.With advanced security systems,
@@ -525,9 +519,7 @@ const Home = () => {
                   <img src={Images.icon04} alt="pro_service" />
                 </div>
                 <div className="service-details">
-                  <a href="service-details.html">
                     <h5 className="title">EXPERT TRADERS</h5>
-                  </a>
                   <p className="disc">
                     Our highly skilled traders assist our clients in developing
                     a strong trading portfolio.
@@ -549,9 +541,7 @@ const Home = () => {
                   <img src={Images.icon05} alt="pro_service" />
                 </div>
                 <div className="service-details">
-                  <a href="service-details.html">
                     <h5 className="title">COVERED BY INSURANCE</h5>
-                  </a>
                   <p className="disc">
                     All Investments in ProBitLive are insured with top Insurance
                     company.
@@ -573,9 +563,7 @@ const Home = () => {
                   <img src={Images.icon06} alt="pro_service" />
                 </div>
                 <div className="service-details">
-                  <a href="service-details.html">
                     <h5 className="title">INSTANT WITHDRAWALS</h5>
-                  </a>
                   <p className="disc">
                     Our withdrawals are all processed instantly after they are
                     requested.
