@@ -12,7 +12,7 @@ const initial = {
   first_name: "",
   last_name: "",
   username: "",
-  email: "", //
+  email: "", 
   password: "",
   address: "",
   address2: "",
