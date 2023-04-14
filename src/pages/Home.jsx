@@ -588,9 +588,11 @@ const Home = () => {
                   </h3>
                 </div>
                 <div className="cta-right">
-                  <Link className="rts-btn btn-white" to="/register">
+                <a
+                      href="https://app.bitbinglive.com"
+                    >
                     Lets Work Together
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
